@@ -46,5 +46,6 @@
 ].each do |name, image_url|
   c = Chocolate.find_or_initialize_by(name: name)
   c.image_url = image_url
+  c.ranking = 1500
   c.save!
 end
