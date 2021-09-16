@@ -1,20 +1,24 @@
 <table>
   <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Name</th>
-      <th>Rating</th>
-      <th>No. of fights</th>
-    </tr>
+  <tr>
+    <th>Rank</th>
+    <th>Name</th>
+    <th>Rating</th>
+    <th>No. of fights</th>
+  </tr>
   </thead>
   <tbody>
-    <% @chocolates.each do |rank, chocolate| %>
-      <tr>
-        <td><%= ActiveSupport::Inflector.ordinalize(rank) %></td>
+  <% @chocolates.each do |rank, chocolate| %>
+    <tr>
+      <td><%= ActiveSupport::Inflector.ordinalize(rank) %></td>
+      <% if @names_visible %>
         <td><%= link_to(chocolate.name, chocolate_path(chocolate)) %></td>
-        <td><%= chocolate.ranking.round %></td>
-        <td><%= chocolate.match_count %></td>
-      </tr>
-    <% end %>
+      <% else %>
+        <td> REDACTED </td>
+      <% end %>
+      <td><%= chocolate.ranking.round %></td>
+      <td><%= chocolate.match_count %></td>
+    </tr>
+  <% end %>
   </tbody>
 </table>

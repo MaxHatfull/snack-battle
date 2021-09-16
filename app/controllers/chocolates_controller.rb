@@ -1,5 +1,7 @@
 class ChocolatesController < ApplicationController
   def index
+    @names_visible = params[:names_visible] == "true"
+
     current_rank = 1
     @chocolates = []
 
