@@ -8,7 +8,7 @@
 
 [
   ["Bounty", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174593617-e1436264400991.jpg?quality=90&strip=all&zoom=1&resize=540%2C216"],
-  ["Ripple", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174593565-e1436269768128.jpg?quality=90&strip=all&zoom=1&resize=540%2C206"],
+  ["Galaxy Ripple", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174593565-e1436269768128.jpg?quality=90&strip=all&zoom=1&resize=540%2C206"],
   ["Yorkie", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174593552.jpg?quality=90&strip=all&zoom=1&resize=540%2C360"],
   ["Cadbury Caramel", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174593546-e1436269621701.jpg?quality=90&strip=all&zoom=1&resize=540%2C152"],
   ["Wispa Gold", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174648235-e1436269512291.jpg?quality=90&strip=all&zoom=1&resize=540%2C262"],
@@ -39,10 +39,7 @@
   ["Mars (deep fried)", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/DeepFriedMarsBar.jpg/1024px-DeepFriedMarsBar.jpg"],
   ["KitKat Chunky", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174648237-e1436268659680.jpg?quality=90&strip=all&zoom=1&resize=540%2C156"],
   ["Cadbury Aztec", "https://www.doyouremember.co.uk/uploads/tlyoHIBMeee-595x417-resize.jpg"],
-  ["Freddo", "https://assets.sainsburys-groceries.co.uk/gol/7716115/1/640x640.jpg"]
-
-
-
+  ["Freddo", "https://assets.sainsburys-groceries.co.uk/gol/7716115/1/640x640.jpg"],
 ].each do |name, image_url|
   c = Chocolate.find_or_initialize_by(name: name)
   c.image_url = image_url
