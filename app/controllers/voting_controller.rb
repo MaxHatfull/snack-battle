@@ -22,6 +22,8 @@ class VotingController < ApplicationController
         winner: winner.ranking,
         loser: loser.ranking
       )
+      winner.match_count += 1
+      loser.match_count += 1
       winner.save!
       loser.save!
     end
