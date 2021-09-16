@@ -2,10 +2,10 @@
   <div class="name">
     <%= choice.name %>
   </div>
+  <div class="button">
+    <%= f.button 'Vote!', value: choice.id, name: "choice", class: "btn btn-success btn-lg", type: "submit" %>
+  </div>
   <div class="picture">
     <%= image_tag choice.image_url%>
-  </div>
-  <div class="button">
-    <%= f.button 'Vote!', value: choice.id, name: "choice", class: "btn btn-success", type: "submit" %>
   </div>
 </div>
