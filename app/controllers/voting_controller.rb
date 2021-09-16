@@ -12,7 +12,7 @@ class VotingController < ApplicationController
   def vote
     loser_id = ([params[:left_id], params[:right_id]] - [params[:choice]]).first
 
-    Chocolate.transaction do
+    #Chocolate.transaction do
       #winner, loser = Chocolate.lock.find([params[:choice], loser_id])
       winner, loser = Chocolate.find([params[:choice], loser_id])
       # winner = Chocolate.find(params[:choice])
@@ -26,7 +26,7 @@ class VotingController < ApplicationController
       loser.match_count += 1
       winner.save!
       loser.save!
-    end
+    #end
 
     redirect_to :root
   end
