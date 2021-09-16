@@ -1,0 +1,10 @@
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% @chocolates.each do |chocolate| %>
+    <tr>
+      <td><%= link_to(chocolate.name, chocolate_path(chocolate)) %></td>
+    </tr>
+  <% end %>
+</table>
