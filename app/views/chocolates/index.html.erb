@@ -8,7 +8,7 @@
     <tr>
       <td><%= ActiveSupport::Inflector.ordinalize(rank) %></td>
       <td><%= link_to(chocolate.name, chocolate_path(chocolate)) %></td>
-      <td><%= chocolate.ranking %></td>
+      <td><%= chocolate.ranking.round %></td>
     </tr>
   <% end %>
 </table>

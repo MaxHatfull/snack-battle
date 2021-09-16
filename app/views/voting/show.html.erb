@@ -1,6 +1,7 @@
 <div class="title">
   <h1>Choose!</h1>
 </div>
+
 <%= form_with url: '/vote' do |f| %>
   <%= f.hidden_field :left_id, value: @left_choice.id %>
   <%= f.hidden_field :right_id, value: @right_choice.id %>
