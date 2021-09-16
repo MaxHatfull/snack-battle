@@ -40,6 +40,8 @@
   ["KitKat Chunky", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174648237-e1436268659680.jpg?quality=90&strip=all&zoom=1&resize=540%2C156"],
   ["Cadbury Aztec", "https://www.doyouremember.co.uk/uploads/tlyoHIBMeee-595x417-resize.jpg"],
   ["Freddo", "https://assets.sainsburys-groceries.co.uk/gol/7716115/1/640x640.jpg"],
+  ["Coco Pops", "https://digitalcontent.api.tesco.com/v2/media/ghs/ef5e1e5d-ddbb-4b83-9018-67796e745fb2/snapshotimagehandler_2123950757.jpeg?h=540&w=540"],
+  ["Jaffa Cake", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Jaffa_cake.png/1920px-Jaffa_cake.png"],
 ].each do |name, image_url|
   c = Chocolate.find_or_initialize_by(name: name)
   c.image_url = image_url
