@@ -3,7 +3,7 @@
     <%= choice.name %>
   </div>
   <div class="button">
-    <%= f.button 'Vote!', value: choice.id, name: "choice", class: "btn btn-success btn-lg", type: "submit" %>
+    <%= f.button 'Vote!', value: choice.id, name: "choice", class: "btn btn-success btn-lg", type: "submit", data: { disable_with: 'Vote!' } %>
   </div>
   <div class="picture">
     <%= image_tag choice.image_url%>
