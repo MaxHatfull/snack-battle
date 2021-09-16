@@ -14,7 +14,7 @@
   ["Wispa Gold", "Sturdy Guide", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174648235-e1436269512291.jpg?quality=90&strip=all&zoom=1&resize=540%2C262"],
   ["Wispa", "Graceful Bard", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174593605-e1436269331188.jpg?quality=90&strip=all&zoom=1&resize=540%2C149"],
   ["Aero", "Hulking Experiment", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174593586.jpg?quality=90&strip=all&zoom=1&resize=540%2C219"],
-  ["Daily Milk", "Tedious Alchemist", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174593540-e1436269356114.jpg?quality=90&strip=all&zoom=1&resize=540%2C268"],
+  ["Dairy Milk", "Tedious Alchemist", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174593540-e1436269356114.jpg?quality=90&strip=all&zoom=1&resize=540%2C268"],
   ["Toblerone", "Uncovered Knight", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174593607-e1436269068347.jpg?quality=90&strip=all&zoom=1&resize=540%2C178"],
   ["Lion Bar", "Imminent Misery", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174654600.jpg?quality=90&strip=all&zoom=1&resize=540%2C163"],
   ["Turkish Delight", "Languid Herbalist", "https://metro.co.uk/wp-content/uploads/2015/07/ad_174593596.jpg?quality=90&strip=all&zoom=1&resize=540%2C426"],
