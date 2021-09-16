@@ -1,8 +1,7 @@
 class VotingController < ApplicationController
   # GET /show
   def show
-    chocolates = Chocolate.all
-    random_chocolates = chocolates.shuffle
+    random_chocolates = Chocolate.find(Chocolate.pluck(:id).sample(2))
 
     @left_choice = random_chocolates.first
     @right_choice = random_chocolates.second
