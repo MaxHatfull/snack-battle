@@ -1,5 +1,9 @@
 <% unless @names_visible %>
-  <h1 id="url">Vote here: yerl.org/W9NFC</h1>
+  <% if @closed %>
+    <h1 id="url">Voting has now closed! <%= link_to("Results", result_chocolates_path) %></h1>
+  <% else %>
+    <h1 id="url">Vote here: yerl.org/W9NFC</h1>
+  <% end %>
 <% end %>
 <div>
   <%= turbo_stream_from "chocolates_#{@names_visible ? "secret" : "public"}" %>

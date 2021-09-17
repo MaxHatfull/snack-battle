@@ -1,6 +1,7 @@
 class VotingController < ApplicationController
   # GET /show
   def show
+    @closed = ENV["CLOSED"].present?
     random_chocolates = Chocolate.find(Chocolate.pluck(:id).sample(2))
 
     @left_choice = random_chocolates.first

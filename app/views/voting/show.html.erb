@@ -1,12 +1,18 @@
 <div class="title">
-  <h1>Choose!</h1>
+  <% if @closed %>
+    <h1>Voting has now closed! <%= link_to("Results", result_chocolates_path) %></h1>
+  <% else %>
+    <h1>Choose!</h1>
+  <% end %>
 </div>
 
-<%= form_with url: '/vote' do |f| %>
-  <%= f.hidden_field :left_id, value: @left_choice.id %>
-  <%= f.hidden_field :right_id, value: @right_choice.id %>
-  <div class="container">
-    <%= render partial: "choice", object: @left_choice, locals: { f: f } %>
-    <%= render partial: "choice", object: @right_choice, locals: { f: f } %>
-  </div>
+<% unless @closed %>
+  <%= form_with url: '/vote' do |f| %>
+    <%= f.hidden_field :left_id, value: @left_choice.id %>
+    <%= f.hidden_field :right_id, value: @right_choice.id %>
+    <div class="container">
+      <%= render partial: "choice", object: @left_choice, locals: { f: f } %>
+      <%= render partial: "choice", object: @right_choice, locals: { f: f } %>
+    </div>
+  <% end %>
 <% end %>
