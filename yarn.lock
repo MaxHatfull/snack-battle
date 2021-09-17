@@ -890,6 +890,24 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"
   integrity sha512-82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw==
 
+"@hotwired/stimulus@^3.0.0-beta.2":
+  version "3.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@hotwired/stimulus/-/stimulus-3.0.0-beta.2.tgz#64ca67af9cc473ca97bb99d98fee5bc08e4c3914"
+  integrity sha512-rp2XojlugD0mvqi3qbqM660PbjqS7hnq/8FYa7SK/DL2rvWDu0/Ka3KW8cyXtcB1RiVG4nX5Oh4oq3nmuDjENQ==
+
+"@hotwired/turbo-rails@^7.0.0-rc.4":
+  version "7.0.0-rc.4"
+  resolved "https://registry.yarnpkg.com/@hotwired/turbo-rails/-/turbo-rails-7.0.0-rc.4.tgz#647e7f976b1bb645a2902c131c235d7440c28e29"
+  integrity sha512-ibCoMPnJRz/1CTsMywYLotq0zz2G4VZUeMiYSupzjmGFesGSJiCRiC42+iXPK/P1qwqp0WdWxSBRhfXI/wbH0A==
+  dependencies:
+    "@hotwired/turbo" "^7.0.0-rc.4"
+    "@rails/actioncable" "^6.0.0"
+
+"@hotwired/turbo@^7.0.0-rc.4":
+  version "7.0.0-rc.4"
+  resolved "https://registry.yarnpkg.com/@hotwired/turbo/-/turbo-7.0.0-rc.4.tgz#d3ab9555544534f5ec649613553e72ff6c7d7122"
+  integrity sha512-4qx+6O6mUN+cSN+ZLGCOGc+2MxNrs7cFbmnWD6LIfiHAQyuNiIuB87Y5IAtOo8xj16fOBd2CdU1WRJya4Wkw0A==
+
 "@npmcli/fs@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@npmcli/fs/-/fs-1.0.0.tgz#589612cfad3a6ea0feafcb901d29c63fd52db09f"
@@ -6476,11 +6494,6 @@ tty-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
   integrity sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY=
-
-turbolinks@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/turbolinks/-/turbolinks-5.2.0.tgz#e6877a55ea5c1cb3bb225f0a4ae303d6d32ff77c"
-  integrity sha512-pMiez3tyBo6uRHFNNZoYMmrES/IaGgMhQQM+VFF36keryjb5ms0XkVpmKHkfW/4Vy96qiGW3K9bz0tF5sK9bBw==
 
 type-is@~1.6.17, type-is@~1.6.18:
   version "1.6.18"

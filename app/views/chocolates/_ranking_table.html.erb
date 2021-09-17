@@ -1,0 +1,28 @@
+<div id="ranking-table">
+  <% chocolates.each_slice((chocolates.size / 2.0).round).each do |chocolate_slice| %>
+    <table>
+      <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Rating</th>
+        <th>No. of fights</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% chocolate_slice.each do |rank, chocolate| %>
+        <tr>
+          <td><%= ActiveSupport::Inflector.ordinalize(rank) %></td>
+          <% if names_visible %>
+            <td><%= link_to(chocolate.name, chocolate_path(chocolate)) %> <em>(<%= chocolate.redacted_name %>)</em></td>
+          <% else %>
+            <td><%= chocolate.redacted_name %></td>
+          <% end %>
+          <td><%= chocolate.ranking.round %></td>
+          <td><%= chocolate.match_count %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  <% end %>
+</div>

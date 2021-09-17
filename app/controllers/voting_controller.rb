@@ -29,6 +29,26 @@ class VotingController < ApplicationController
       loser.save!
     end
 
+    chocolates = ChocolateRankService.generate
+    Turbo::StreamsChannel.broadcast_replace_to(
+      "chocolates_public",
+      target: "ranking-table",
+      partial: "chocolates/ranking_table",
+      locals: {
+        names_visible: false,
+        chocolates: chocolates
+      }
+    )
+    Turbo::StreamsChannel.broadcast_replace_to(
+      "chocolates_secret",
+      target: "ranking-table",
+      partial: "chocolates/ranking_table",
+      locals: {
+        names_visible: true,
+        chocolates: chocolates
+      }
+    )
+
     redirect_to :root
   end
 end
