@@ -1,7 +1,22 @@
 class ChocolatesController < ApplicationController
   def index
-    @names_visible = params[:names_visible] == "true"
+    fetch_chocolate
+  end
 
+  def result
+    fetch_chocolate
+    @names_visible = true
+
+    render :index
+  end
+
+  def show
+    @chocolate = Chocolate.find(params[:id])
+  end
+
+  private
+
+  def fetch_chocolate
     current_rank = 1
     @chocolates = []
 
@@ -9,9 +24,5 @@ class ChocolatesController < ApplicationController
       @chocolates += cs.map {|c| [current_rank, c] }
       current_rank += cs.count
     end
-  end
-
-  def show
-    @chocolate = Chocolate.find(params[:id])
   end
 end

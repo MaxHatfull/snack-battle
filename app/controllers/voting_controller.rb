@@ -9,6 +9,11 @@ class VotingController < ApplicationController
 
   # POST /vote
   def vote
+    if ENV["CLOSED"].present?
+      head :gone
+      return
+    end
+
     loser_id = ([params[:left_id], params[:right_id]] - [params[:choice]]).first
 
     Chocolate.transaction do

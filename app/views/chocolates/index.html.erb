@@ -2,29 +2,33 @@
   <script>
     setTimeout(() => { location.reload()}, 2000)
   </script>
+
+  <h1 id="url">yerl.org/W9NFC</h1>
 <% end %>
 
-<table>
-  <thead>
-  <tr>
-    <th>Rank</th>
-    <th>Name</th>
-    <th>Rating</th>
-    <th>No. of fights</th>
-  </tr>
-  </thead>
-  <tbody>
-  <% @chocolates.each do |rank, chocolate| %>
+<% @chocolates.each_slice((@chocolates.size / 2.0).round).each do |chocolates| %>
+  <table>
+    <thead>
     <tr>
-      <td><%= ActiveSupport::Inflector.ordinalize(rank) %></td>
-      <% if @names_visible %>
-        <td><%= link_to(chocolate.name, chocolate_path(chocolate)) %> <em>(<%= chocolate.redacted_name %>)</em></td>
-      <% else %>
-        <td><%= chocolate.redacted_name %></td>
-      <% end %>
-      <td><%= chocolate.ranking.round %></td>
-      <td><%= chocolate.match_count %></td>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>No. of fights</th>
     </tr>
-  <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+    <% chocolates.each do |rank, chocolate| %>
+      <tr>
+        <td><%= ActiveSupport::Inflector.ordinalize(rank) %></td>
+        <% if @names_visible %>
+          <td><%= link_to(chocolate.name, chocolate_path(chocolate)) %> <em>(<%= chocolate.redacted_name %>)</em></td>
+        <% else %>
+          <td><%= chocolate.redacted_name %></td>
+        <% end %>
+        <td><%= chocolate.ranking.round %></td>
+        <td><%= chocolate.match_count %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>

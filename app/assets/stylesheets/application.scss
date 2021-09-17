@@ -19,10 +19,19 @@ html, body {
    width: 100%;
 }
 
+#url {
+  text-align: center;
+}
+
 tbody tr:nth-child(odd) {
   background-color: #ccc;
 }
 
 th, td {
   padding: 0 5px;
+}
+
+table {
+  float: left;
+  margin-right: 30px;
 }
