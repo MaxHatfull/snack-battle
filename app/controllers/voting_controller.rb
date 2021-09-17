@@ -11,7 +11,7 @@ class VotingController < ApplicationController
   # POST /vote
   def vote
     if ENV["CLOSED"].present?
-      head :gone
+      redirect_to :root
       return
     end
 
