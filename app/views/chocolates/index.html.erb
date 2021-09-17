@@ -1,3 +1,6 @@
+<% unless @names_visible %>
+  <h1 id="url">Vote here: yerl.org/W9NFC</h1>
+<% end %>
 <div>
   <%= turbo_stream_from "chocolates_#{@names_visible ? "secret" : "public"}" %>
   <%= render partial: 'ranking_table', locals: { names_visible: @names_visible, chocolates: @chocolates} %>
